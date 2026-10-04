@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Keyword Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Resume<span>Scan</span></div>
+
+    <nav>
+        <a href="#analyzer">Analyzer</a>
+        <a href="#results">Results</a>
+        <a href="#tips">Tips</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+
+        <span class="tag">SMART RESUME ANALYSIS</span>
+
+        <h1>
+            Make Your Resume
+            <span>Job-Ready.</span>
+        </h1>
+
+        <p>
+            Compare your resume with a job description,
+            discover missing skills and improve your keyword match.
+        </p>
+
+        <a href="#analyzer" class="hero-btn">
+            Analyze My Resume
+        </a>
+
+    </div>
+</section>
+
+<section class="analyzer-section" id="analyzer">
+
+    <div class="section-title">
+        <h2>Resume Keyword Analyzer</h2>
+        <p>Paste your resume and the job description below.</p>
+    </div>
+
+    <div class="input-grid">
+
+        <div class="text-card">
+
+            <div class="card-header">
+                <h3>Your Resume</h3>
+                <span id="resumeCount">0 words</span>
+            </div>
+
+            <textarea
+                id="resumeText"
+                placeholder="Paste your resume text here...
+
+Example:
+JavaScript developer with experience in React, Node.js, MongoDB, Git and AWS..."
+            ></textarea>
+
+        </div>
+
+        <div class="text-card">
+
+            <div class="card-header">
+                <h3>Job Description</h3>
+                <span id="jobCount">0 words</span>
+            </div>
+
+            <textarea
+                id="jobText"
+                placeholder="Paste the job description here...
+
+Example:
+Looking for a Full Stack Developer with JavaScript, React, Node.js, MongoDB and AWS skills..."
+            ></textarea>
+
+        </div>
+
+    </div>
+
+    <div class="action-row">
+
+        <button id="analyzeBtn" class="analyze-btn">
+            Analyze Resume
+        </button>
+
+        <button id="sampleBtn" class="sample-btn">
+            Load Sample
+        </button>
+
+        <button id="clearBtn" class="clear-input-btn">
+            Clear
+        </button>
+
+    </div>
+
+</section>
+
+<section class="results-section hidden" id="results">
+
+    <div class="section-title">
+        <h2>Analysis Results</h2>
+        <p>Here's how closely your resume matches the job description.</p>
+    </div>
+
+    <div class="score-card">
+
+        <div class="score-circle">
+            <strong id="matchScore">0%</strong>
+            <span>Match</span>
+        </div>
+
+        <div class="score-content">
+
+            <span id="scoreLabel" class="score-label">
+                START ANALYSIS
+            </span>
+
+            <h2 id="scoreTitle">
+                Analyze your resume
+            </h2>
+
+            <p id="scoreDescription">
+                Your results will appear here.
+            </p>
+
+            <div class="progress-track">
+                <div id="scoreProgress" class="progress-bar"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <strong id="resumeWords">0</strong>
+            <span>Resume Words</span>
+        </div>
+
+        <div class="stat-card">
+            <strong id="jobWords">0</strong>
+            <span>Job Words</span>
+        </div>
+
+        <div class="stat-card">
+            <strong id="matchedCount">0</strong>
+            <span>Matched Skills</span>
+        </div>
+
+        <div class="stat-card">
+            <strong id="missingCount">0</strong>
+            <span>Missing Skills</span>
+        </div>
+
+    </div>
+
+    <div class="skills-grid">
+
+        <div class="skills-card">
+
+            <div class="skills-header">
+                <h3>Matched Keywords</h3>
+                <span class="matched-badge">MATCHED</span>
+            </div>
+
+            <div id="matchedSkills" class="skill-list">
+                <p class="empty-text">
+                    No results yet.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="skills-card">
+
+            <div class="skills-header">
+                <h3>Missing Keywords</h3>
+                <span class="missing-badge">MISSING</span>
+            </div>
+
+            <div id="missingSkills" class="skill-list">
+                <p class="empty-text">
+                    No results yet.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="strength-card">
+
+        <div class="strength-header">
+            <div>
+                <h3>Resume Strength</h3>
+                <p>Based on keyword coverage and resume content.</p>
+            </div>
+
+            <strong id="strengthScore">0%</strong>
+        </div>
+
+        <div class="strength-track">
+            <div id="strengthProgress"></div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="tips-section" id="tips">
+
+    <div class="section-title">
+        <h2>Resume Improvement Tips</h2>
+        <p>Simple ways to improve your keyword match.</p>
+    </div>
+
+    <div class="tips-grid">
+
+        <div class="tip-card">
+            <span>01</span>
+            <h3>Use Relevant Skills</h3>
+            <p>
+                Include technical skills that are genuinely relevant
+                to the position you are applying for.
+            </p>
+        </div>
+
+        <div class="tip-card">
+            <span>02</span>
+            <h3>Show Projects</h3>
+            <p>
+                Mention projects where you actually used the
+                technologies listed in the job description.
+            </p>
+        </div>
+
+        <div class="tip-card">
+            <span>03</span>
+            <h3>Use Clear Keywords</h3>
+            <p>
+                Use standard technology and skill names so recruiters
+                can quickly identify your experience.
+            </p>
+        </div>
+
+        <div class="tip-card">
+            <span>04</span>
+            <h3>Keep It Relevant</h3>
+            <p>
+                Avoid adding unrelated keywords just to increase
+                the score. Accuracy matters.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 ResumeScan | Resume Keyword Analyzer</p>
+    <p>Build a stronger resume. Find better opportunities.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
